@@ -1,0 +1,252 @@
+
+html{
+	/*primary-Colors*/
+	--color-primary-brightcoral:	#F53240;
+	--color-primary-golden:			#F9BE02;
+	--color-primary-sky:			#75DBD5;
+	/*grey-Colors*/
+	--color-grey-lightgrey:			#575752;
+	--color-grey-primary-grey:		#32322C;
+	--color-grey-drak-grey:			#2E2E28; /*primary Text color */
+	/*bright coral-variables*/
+	--color-variables-light-coral:	#F54451;
+	--color-variables-dark-coral:	#C92935;
+	/*golden color-variables*/
+	--color-variables-light-golden:	#FAC930;
+	--color-variables-dark-golden:	#CC9C02;
+	/*sky color-variables*/
+	--color-variables-light-sky:	#8EE1DC;
+	--color-variables-dark-sky:		#60B4AF;
+	/*sky color-variables*/
+	--color-variables-light-grey:	#8F8F8B;
+	--color-variables-warm-grey:	#C7C7C5; /*Primary Text color on dark background */
+	--color-variables-smoke-grey:	#ECECEB;
+
+	
+	
+	/*Fonts*/
+	--font-primary:		'Raleway', Arial ,sans-serif; 
+	--font-secondary:	'Oswald', Arial ,sans-serif;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+   
+html{
+	color: var( --color-grey-drak-grey ); /* #2E2E28 */
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1.5;
+}
+/*body {
+	max-width: 30.5rem; /*set it to 480px becasue of mobile first design
+}*/
+a{
+	color: var( --color-variables-light-coral );
+	font-family: var(--font-primary);
+}
+a:hover{
+   text-decoration: underline;
+}
+a:active{ 
+   text-decoration: underline; /* wanted to zoom/scale */
+   transform: scale(1.1); 
+   
+}
+a:focus {
+   text-decoration: underline;
+}
+
+/*a:visited {
+    color: var( --color-variables-light-golden);
+}*/
+
+.main-content{
+	max-width: 30.5rem; /*set it to 480px becasue of mobile first design*/
+}
+/* ==========================================================================
+   Header Component
+   ========================================================================== */
+.site-header{
+	background-color:  var( --color-variables-light-golden ); /*#FAC930*/
+	padding: 2rem;
+}
+.site-header-nav ul a , .site-header-nav li a:visited{
+	text-decoration: none;
+}
+.site-header-nav{
+	margin: 0;
+	padding: 0;   
+}
+.site-header-nav li {
+	font-family: var( --font-primary ); /*'Raleway', Arial ,sans-serif;*/
+	font-weight: 500;
+	list-style-type:none;
+	padding-left: 0;
+}
+
+.site-header-nav li a {
+	display:block; 
+	max-width: 15rem;
+	padding:0.7rem; 
+	text-decoration: none;
+}
+.site-header-nav li a:hover {
+	background-color: var( --color-variables-light-coral ) ; 
+	border: 1px solid  var( --color-variables-light-coral );
+	border-radius: 10px;
+	color: var( --color-variables-light-golden );
+	font-weight: 600; /*didt download 600 but wanted to show for hover effect how to solve this */
+	
+}
+.site-header-nav li a:active { /* wanted to scale the to the active need tips */
+	text-decoration: underline;
+	
+}
+.site-header-nav li a:focus{
+	background-color: var( --color-variables-light-coral ) ; 
+	border: 1px solid  var( --color-variables-light-coral );
+	border-radius: 10px;
+	color: var( --color-variables-light-golden );
+	font-weight: 600; /*didt download 600 but wanted to show for hover effect how to solve this */
+	
+}
+
+/* Style the active class buttons */
+.active{
+ /* background-color: var( --color-variables-light-coral ) ; /*#F54451*/
+  border: 1px solid  var( --color-variables-light-coral );
+  border-radius: 10px;
+  color: var( --color-variables-light-coral ); /*#ECECEB*/
+  cursor: pointer;
+  outline: none;
+  padding: 15px 16px;
+}
+
+
+
+/* ==========================================================================
+   Footer Component
+   ======================================================================== */
+ .site-footer{
+   	background-color: var( --color-grey-primary-grey ); /*#32322C*/
+   	color: var( --color-variables-warm-grey );/*#C7C7C5*/
+	padding: 2rem;
+
+ }
+ .site-footer a {
+   	text-decoration: none;
+ }
+.site-footer a:hover{
+   	background-color: var( --color-variables-light-coral ) ; 
+	border: 1px solid  var( --color-variables-light-coral );
+	border-radius: 5px;
+	color: var( --color-grey-primary-grey );
+	font-weight: 600;
+ }
+.site-footer a:focus{
+   	background-color: var( --color-variables-light-coral ) ; 
+	border: 1px solid  var( --color-variables-light-coral );
+	border-radius: 5px;
+	color: var( --color-grey-primary-grey );
+	font-weight: 600;
+   }
+.site-footer a:active{
+	background-color: var( --color-variables-light-coral ) ; 
+	/*border: 1px solid  var( --color-variables-light-coral );*/
+	border-radius: 5px;
+	color: var( --color-grey-primary-grey );
+	font-weight: 600;
+  	transform: scale(1.1); 
+  }
+
+.site-footer-nav{
+	/*list-style-type:none;*/
+	margin: 0;
+	overflow: hidden;
+	padding: 0;   
+}
+.site-footer-nav li {
+    /*display:block;*/
+	float:left;
+	list-style-type:none;
+	padding-left: 0;
+}
+
+.site-footer-nav li a {
+	display:block; 
+	padding:0.5rem; 
+	text-decoration: none;
+}
+.site-footer-nav a:hover{
+	background-color: var( --color-variables-light-coral ) ; 
+	/*border: 1px solid  var( --color-variables-light-coral );*/
+	border-radius: 5px;
+	color: var( --color-grey-primary-grey );
+	font-weight: 600;
+} 
+.site-footer-nav a:focus{
+	background-color: var( --color-variables-light-coral ) ; 
+	/*border: 1px solid  var( --color-variables-light-coral );*/
+	border-radius: 5px;
+	color: var( --color-grey-primary-grey );
+	font-weight: 600;
+} 
+.site-footer-nav a:active{
+	background-color: var( --color-variables-light-coral ) ; 
+	/*border: 1px solid  var( --color-variables-light-coral );*/
+	border-radius: 5px;
+	color: var( --color-grey-primary-grey );
+	font-weight: 600;
+  	transform: scale(1.1); 
+
+}
+
+/* ==========================================================================
+   figure Component 
+   ======================================================================== */
+figure {
+  font-family: var( --font-secondary );
+  text-transform: uppercase;
+}
+figure svg {
+  font-family: var( --font-primary );
+  text-transform: uppercase;
+}
+
+/* font setteings */
+h2 , h1 {
+	font-family: var( --font-secondary );
+}
+/*h1{
+	font-family: 'Oswald', Arial ,sans-serif;
+}*/
+h3 ,dl {
+	font-family: var(--font-primary );
+}
+p{
+	/*background-color: var( --color-variables-smoke-grey );*/
+	font-family: var(--font-primary );
+
+}
+/*dl{
+	font-family: 'Raleway', Arial ,sans-serif;
+}*/
+.primary-typeface h2{
+
+	font-family: var(--font-primary);
+}
+.primary-typeface h4 , .secondary-typeface h4{
+
+	color: var( --color-variables-light-grey );
+	font-family: var(--font-primary);
+	text-transform: capitalize;
+}
+.secondary-typeface h2{
+
+	font-family: var( --font-secondary );
+}
+
+
+   
