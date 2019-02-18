@@ -58,9 +58,9 @@ a:focus {
    text-decoration: underline;
 }
 
-/*a:visited {
+a:visited {
     color: var( --color-variables-light-golden);
-}*/
+}
 
 .main-content{
 	max-width: 30.5rem; /*set it to 480px becasue of mobile first design*/
@@ -72,7 +72,8 @@ a:focus {
 	background-color:  var( --color-variables-light-golden ); /*#FAC930*/
 	padding: 2rem;
 }
-.site-header-nav ul a , .site-header-nav li a:visited{
+.site-header-nav a, .site-header-nav a:visited{
+	color: var( --color-variables-light-coral );
 	text-decoration: none;
 }
 .site-header-nav{
@@ -135,7 +136,8 @@ a:focus {
 	padding: 2rem;
 
  }
- .site-footer a {
+ .site-footer a , .site-footer a:visited {
+ 	color: var( --color-variables-light-coral );
    	text-decoration: none;
  }
 .site-footer a:hover{
@@ -215,13 +217,12 @@ figure svg {
   text-transform: uppercase;
 }
 
-/* font setteings */
+/* ==========================================================================
+   font setteings
+   ======================================================================== */
 h2 , h1 {
 	font-family: var( --font-secondary );
 }
-/*h1{
-	font-family: 'Oswald', Arial ,sans-serif;
-}*/
 h3 ,dl {
 	font-family: var(--font-primary );
 }
@@ -230,9 +231,6 @@ p{
 	font-family: var(--font-primary );
 
 }
-/*dl{
-	font-family: 'Raleway', Arial ,sans-serif;
-}*/
 .primary-typeface h2{
 
 	font-family: var(--font-primary);
@@ -246,6 +244,16 @@ p{
 .secondary-typeface h2{
 
 	font-family: var( --font-secondary );
+}
+.icon-circle{
+
+	stroke: var( --color-variables-light-coral ) ;
+	sroke-width: 2;
+}
+.icon-shape{
+
+	fill: var( --color-variables-light-coral ) ;
+
 }
 
 
