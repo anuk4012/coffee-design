@@ -64,18 +64,19 @@ html{
 }
 
 body {
-	background-color: var( --color-variables-smoke-white ); /*to-do add bacound color #FEFEFC */
-	/*max-width: 30.5rem; /*set it to 480px becasue of mobile first design*/
+		background-color: var( --color-variables-smoke-white ); /*to-do add bacound color #FEFEFC */
 }
 
-a{
-	color: var( --color-variables-light-coral );
-	font-family: var(--font-primary);
+a {
+		color: var( --color-variables-light-coral );
+		font-family: var(--font-primary);
 }
-a:hover{
-   text-decoration: underline;
+
+a:hover {
+   		text-decoration: underline;
 }
-a:active{ 
+
+a:active { 
    text-decoration: underline; /* wanted to zoom/scale */
    transform: scale(1.1); 
    
@@ -88,54 +89,66 @@ a:visited {
     color: var( --color-variables-light-golden);
 }
 
-.main-content { 
-	
-	max-width: 30.5rem; /*set it to 480px becasue of mobile first design*/
+.main-content { 	
+	max-width: 35.5rem; /*set it to 480px becasue of mobile first design*/
 
 }
 
-
-/*For large Screens*/
-
-.large-headings-styles{
+.typeface-styles {
 	border-radius: 12px;
 	background-color: var( --color-variables-white ); /*#FFFFFF*/
 	box-shadow: 0px 0px 3.1px var( --color-variables-light-grey );
 	margin-bottom: 0.7em;
 	padding: 0.1rem 0px;
 }
-.large-headings-styles h1 , .heading-large-styles h2 ,.heading-large-styles h3 , .heading-large-styles h4 , .heading-large-styles h5 , .heading-large-styles h6 {
+
+/*For large Screens*/
+
+.large-headings-styles {
+	border-radius: 12px;
+	background-color: var( --color-variables-white ); /*#FFFFFF*/
+	box-shadow: 0px 0px 3.1px var( --color-variables-light-grey );
+	margin-bottom: 0.7em;
+	padding: 0.1rem 0px;
+}
+
+ h1 ,  h2 , h3 ,  h4 ,  h5 , h6 {
 	font-family: var(--font-secondary);
 	margin: 0.2em 0 0.1em;
 	text-transform: none;
 }
 
-.large-headings-styles figure{
+.large-headings-styles figure {
 
 	text-transform: none;
 
 }
-.large-headings-styles h1+h2{
+
+.large-headings-styles h1+h2 {
 	/*margin-top: 1em;*/
 }
-.large-headings-styles h3,h4,h5,h6 {
+
+h3,h4,h5,h6 {
 	color: var(--color-grey-primary-grey);
 }
-.large-headings-styles  h1,h2,h3 {
+
+h1,h2,h3 {
 	font-weight:300;
 }
-.large-headings-styles  h4,h5,h6 {
+
+h4,h5,h6 {
 	font-weight:400;
 }
 
-.large-headings-styles h1{
+h1 {
 	color: var( --color-variables-light-coral );
  	font-size: var( --size-xxxlarge ) ;
  	line-height: 0.9;
  	letter-spacing: -0.01rem;
  	margin: 0.25em 0 0.1em;
 }
-.large-headings-styles h2{
+ 
+h2 { 
 	color:	var( --color-primary-sky );
  	font-size: var( --size-xxlarge) ; /*4.236rem;*/
  	line-height: 1.05;
@@ -143,48 +156,55 @@ a:visited {
  	text-shadow: 0.5px 0.5px 0.8px var( --color-variables-light-sky );
  	
 }
-.large-headings-styles h3{
+
+h3 {
  	font-size: var( --size-xlarge ) ; 
  	/*font-family: var(--font-secondary);*/
  	line-height: 1.3;
  	letter-spacing: -0.05rem;
  	  
 }
-.large-headings-styles h4{
+
+ h4 {
  	font-size: var( --size-large ) ; 
  	line-height: 1.2;
  	letter-spacing: 0.01rem;
 }
-.large-headings-styles h5{
+
+ h5 {
  	font-size: var( --size-small ) ;
  	line-height: 1.4;
  	letter-spacing: 0.019rem;
  	
 }
-.large-headings-styles h6{
+
+ h6 {
  	font-size: var( --size-xsmall ) ;
  	line-height: 1.4;
  	letter-spacing: 0.019rem;
  	margin-bottom: 0.1em;
 
 }
-.large-headings-styles span{
+
+.large-headings-styles span {
 	font-weight:200;
 	font-size: var( --size-xsmall );
 	padding-bottom:0.7rem;
 	text-transform: none;
 	 
 }
-.divider {
-	border-bottom: 1px solid var(--color-primary-sky);
-	margin-top: 0.4rem;
+
+.header-description {
+	border-top: 1px solid var(--color-primary-sky);
+	margin-top: 0.65rem;
 	text-transform: none;
 	width: 109px; /*var( --size-xxxlarge ) */
 	
 }
+
 /*For Mobile Screens*/
 
-.small-headings-styles{
+.small-headings-styles {
 	border-radius: 12px;
 	background-color: var( --color-variables-white ); /*#FFFFFF*/
 	box-shadow: 0px 0px 3.1px var( --color-variables-light-grey );
@@ -193,7 +213,7 @@ a:visited {
 }
 
 
-.small-headings-styles h1,h2,h3,h4,h5,h6 {
+/*.small-headings-styles h1,h2,h3,h4,h5,h6 {
 
 	font-family: var(--font-secondary);
 	margin: 0.7em 0 0.1em;
@@ -210,10 +230,10 @@ a:visited {
 }
 
 .small-headings-styles h1{
-	/*background-color: var( --color-variables-light-golden );*/
+	/*background-color: var( --color-variables-light-golden );
 	color: var( --color-variables-light-coral );
  	font-size: var( --size-xxxlarge ) ;
- 	/*font-weight: 300;*/
+ 	/*font-weight: 300;
  	line-height: 1.03;
  	letter-spacing: -0.01rem;
  	margin: 0.25em 0 0.1em;
@@ -221,45 +241,45 @@ a:visited {
 .small-headings-styles h2{
 	color:	var( --color-primary-sky );
  	font-size: var( --size-xxlarge) ; /*4.236rem;*/
- 	/*font-weight: 300;*/
+ 	/*font-weight: 300;
  	line-height: 1.05;
  	letter-spacing: 0.05rem;
  	text-shadow: 0.5px 0.5px 0.8px #8EE1DC;
- 	/*margin-bottom: 0.1em;*/
+ 	/*margin-bottom: 0.1em;
 }
 .small-headings-styles h3{
-	/*color: var(--color-grey-primary-grey);*/
+	/*color: var(--color-grey-primary-grey);
  	font-size: var( --size-xlarge ) ; 
  	font-family: var(--font-secondary);
- 	/*font-weight:300;*/
+ 	/*font-weight:300;
  	line-height: 1.3;
  	letter-spacing: -0.05rem;
- 	/*margin-bottom: 0.1em;  */
+ 	/*margin-bottom: 0.1em;  
 }
 .small-headings-styles h4{
 	/*color: var(--color-grey-primary-grey);*/
-	/*font-family: var( --font-secondary );*/
+	/*font-family: var( --font-secondary );
  	font-size: var( --size-large ) ; 
- 	/*font-weight:400;*/
+ 	/*font-weight:400;
  	line-height: 1.2;
  	letter-spacing: 0.01rem;
- 	/*margin-bottom: 0.1em;*/
+ 	/*margin-bottom: 0.1em;
 }
 .small-headings-styles h5{
-	/*color: var(--color-grey-primary-grey);*/
-	/*font-family: var( --font-secondary );*/
+	/*color: var(--color-grey-primary-grey);
+	/*font-family: var( --font-secondary );
  	font-size: var( --size-small ) ;
- 	/*font-weight:400;*/
+ 	/*font-weight:400;
  	line-height: 1.4;
  	letter-spacing: 0.019rem;
- 	/*margin-bottom: 0.1em;*/
+ 	/*margin-bottom: 0.1em;
 
 }
 .small-headings-styles h6{
-	/*color: var(--color-grey-primary-grey);*/
-	/*font-family: var( --font-secondary );*/
+	/*color: var(--color-grey-primary-grey);
+	/*font-family: var( --font-secondary );
  	font-size: var( --size-xsmall ) ;
- 	/*font-weight:400;*/
+ 	/*font-weight:400;
  	line-height: 1.4;
  	letter-spacing: 0.019rem;
  	margin-bottom: 0.1em;
@@ -272,11 +292,11 @@ a:visited {
 	padding-bottom:0.7rem;
 	text-transform: none;
 	 
-}
+}*/
 
 /*Featured Copy*/
 
-.featured-copy-styling{
+.featured-copy-styling {
     border-radius: 12px;
 	background-color: var( --color-variables-white ); /*#FFFFFF*/
 	box-shadow: 0px 0px 3.1px var( --color-variables-light-grey );
@@ -285,6 +305,7 @@ a:visited {
 	
 
 }
+
 .featured-copy-styling h3 {
 	color: var(--color-primary-sky);
 	font-family: var(--font-secondary );
@@ -296,7 +317,8 @@ a:visited {
     text-transform: capitalize;
     
  }
- .featured-copy-styling figure{
+
+ .featured-copy-styling figure {
 
  	text-transform: none;
  }
@@ -313,7 +335,7 @@ a:visited {
 
 /*normal body for paragaraph*/
 
-.normal-copy-styling{
+.normal-copy-styling {
 
 	border-radius: 12px;
 	background-color: var( --color-variables-white ); /*#FFFFFF*/
@@ -322,7 +344,8 @@ a:visited {
 	padding: 10px 0 10px;
 
 }
-.normal-copy-styling h3{
+
+.normal-copy-styling h3 {
 
 	color: var(--color-primary-sky);
 	font-family: var(--font-secondary );
@@ -333,11 +356,12 @@ a:visited {
     text-transform: capitalize;
 }
 
-.normal-copy-styling figure{
+.normal-copy-styling figure {
 
 	text-transform: none;
 }
-.normal-copy{
+
+.normal-copy {
 
 	color: var( --color-grey-primary-grey );
     font-family: var( --font-primary);
@@ -348,7 +372,8 @@ a:visited {
     margin: 0 0 0.1em;
 
 }
-.territory-copy-styling{
+
+.territory-copy-styling {
 
 	border-radius: 12px;
 	background-color: var( --color-variables-white ); /*#FFFFFF*/
@@ -357,6 +382,7 @@ a:visited {
 	padding: 10px 0 10px;
 
 }
+
 .territory-copy-styling h3 {
 
 	color: var(--color-primary-sky);
@@ -368,12 +394,14 @@ a:visited {
     text-transform: capitalize;
 	
 }
-.territory-copy-styling figure{
+
+.territory-copy-styling figure {
 
 	text-transform: none;
 	
 }
-.territory-copy{
+
+.territory-copy {
 
 	color: var( --color-grey-primary-grey );
     font-family: var( --font-primary);
@@ -384,9 +412,11 @@ a:visited {
     margin: 0 0 0.1em;
 
 }
-/*blokequote*/
-.blockquote-stylings{
 
+/*blokequote*/
+.blockquote-stylings {
+	background: url("images/quotes.svg") 15% 14% no-repeat;   
+	background-size: 2.5em;
 	border-radius: 12px;
 	background-color: var( --color-variables-white ); /*#FFFFFF*/
 	box-shadow: 0px 0px 3.1px var( --color-variables-light-grey );
@@ -394,26 +424,31 @@ a:visited {
 	padding: 10px 0 10px;
 
 }
-.blockquote-stylings figure{
+
+.blockquote-stylings figure {
 
 	text-transform: none;
 	
 }
-.blockquote-stylings p{
+
+.blockquote-stylings p {
 	font-weight: 400;
 	line-height: 1.9;
+	margin-top: 2em;
+    padding-top: 2.4em;
 	text-decoration: overline;
 	text-decoration-color: var( --color-primary-brightcoral ); 
 	text-decoration-skip: edges ;
 }
-.blockquote-stylings path{
+
+.blockquote-stylings path {
 
 	fill: var( --color-variables-light-coral ) ;
 }
 
-
-.list-stylings{
-
+.list-stylings { 
+	/*background: url(images/coffeebeans.svg) 10% 15% no-repeat;
+	background-size: 40px;*/
 	border-radius: 12px;
 	background-color: var( --color-variables-white ); /*#FFFFFF*/
 	box-shadow: 0px 0px 3.1px var( --color-variables-light-grey );
@@ -422,53 +457,60 @@ a:visited {
 	padding: 10px 0 10px;
 
 }
-.list-stylings figure{
+
+.list-stylings figure {
 
 	text-transform: none;
 }
 
-.list-stylings h3{
+.list-stylings h3 {
 	color: var( --color-variables-light-coral );
 	font-family: var(--font-secondary );
     font-size: var(--size-large);
-    font-weight: 500;
+    font-weight: 300;
     margin: 0 0em 0.1em;
     text-shadow: 0.5px 0.5px 0.8px var( --color-primary-brightcoral );
     text-transform: capitalize;
 }
+
 .list-stylings ol , ul {
 	font-family: var(--font-primary );
 	
 }
-.list-stylings ul{
-	list-style-type: none;
-	padding-left: 30px
+.list-stylings ul {
+	list-style-image: url("images/coffeebeans.svg");
+
 }
-.list-stylings svg{
-	padding-right: 6px;
-	
-}
-.list-stylings path{
-	fill: var( --color-variables-light-coral ) ;
-}
+
 
 
 
 /* ==========================================================================
    Header Component
    ========================================================================== */
-.site-header{
+
+.site-header-logo {
+	color: var(--color-variables-dark-sky);
+	font-family: var(--font-secondary);
+    font-weight: 400;
+    font-size: var(--size-xlarge);
+}
+
+.site-header {
 	background-color:  var( --color-variables-light-golden ); /*#FAC930*/
 	padding: 2rem;
 }
-.site-header-nav a, .site-header-nav a:visited{
+
+.site-header-nav a, .site-header-nav a:visited {
 	color: var( --color-variables-light-coral );
 	text-decoration: none;
 }
-.site-header-nav{
+
+.site-header-nav {
 	margin: 0;
 	padding: 0;   
 }
+
 .site-header-nav li {
 	font-family: var( --font-primary ); /*'Raleway', Arial ,sans-serif;*/
 	font-weight: 500;
@@ -482,29 +524,33 @@ a:visited {
 	padding:0.7rem; 
 	text-decoration: none;
 }
+
 .site-header-nav li a:hover {
 	background-color: var( --color-variables-light-coral ) ; 
 	border: 1px solid  var( --color-variables-light-coral );
 	border-radius: 10px;
 	color: var( --color-variables-light-golden );
-	font-weight: 600; /*didt download 600 but wanted to show for hover effect how to solve this */
+	font-weight: 500; /*didt download 600 but wanted to show for hover effect how to solve this */
 	
-}
-.site-header-nav li a:active { /* wanted to scale the to the active need tips */
+} 
+
+.site-header-nav li a:active { 
 	text-decoration: underline;
 	
 }
-.site-header-nav li a:focus{
+
+.site-header-nav li a:focus {
 	background-color: var( --color-variables-light-coral ) ; 
 	border: 1px solid  var( --color-variables-light-coral );
 	border-radius: 10px;
 	color: var( --color-variables-light-golden );
-	font-weight: 600; /*didt download 600 but wanted to show for hover effect how to solve this */
+	font-weight: 500; /*didt download 600 but wanted to show for hover effect how to solve this */
 	
 }
 
 /* Style the active class buttons */
-.active{
+
+.active {
  /* background-color: var( --color-variables-light-coral ) ; /*#F54451*/
   border: 1px solid  var( --color-variables-light-coral );
   border-radius: 10px;
@@ -519,47 +565,50 @@ a:visited {
 /* ==========================================================================
    Footer Component
    ======================================================================== */
- .site-footer{
+
+ .site-footer{ 
    	background-color: var( --color-grey-primary-grey ); /*#32322C*/
    	color: var( --color-variables-warm-grey );/*#C7C7C5*/
 	padding: 2rem;
 
  }
+
  .site-footer a , .site-footer a:visited {
  	color: var( --color-variables-light-coral );
    	text-decoration: none;
  }
-.site-footer a:hover{
+
+.site-footer a:hover {
    	background-color: var( --color-variables-light-coral ) ; 
 	border: 1px solid  var( --color-variables-light-coral );
 	border-radius: 5px;
 	color: var( --color-grey-primary-grey );
 	font-weight: 600;
  }
-.site-footer a:focus{
+
+.site-footer a:focus {
    	background-color: var( --color-variables-light-coral ) ; 
 	border: 1px solid  var( --color-variables-light-coral );
 	border-radius: 5px;
 	color: var( --color-grey-primary-grey );
 	font-weight: 600;
-   }
-.site-footer a:active{
+  }
+
+.site-footer a:active {
 	background-color: var( --color-variables-light-coral ) ; 
-	/*border: 1px solid  var( --color-variables-light-coral );*/
 	border-radius: 5px;
 	color: var( --color-grey-primary-grey );
 	font-weight: 600;
   	transform: scale(1.1); 
   }
 
-.site-footer-nav{
-	/*list-style-type:none;*/
+.site-footer-nav {
 	margin: 0;
 	overflow: hidden;
 	padding: 0;   
 }
+
 .site-footer-nav li {
-    /*display:block;*/
 	float:left;
 	list-style-type:none;
 	padding-left: 0;
@@ -570,23 +619,23 @@ a:visited {
 	padding:0.5rem; 
 	text-decoration: none;
 }
-.site-footer-nav a:hover{
+
+.site-footer-nav a:hover {
 	background-color: var( --color-variables-light-coral ) ; 
-	/*border: 1px solid  var( --color-variables-light-coral );*/
 	border-radius: 5px;
 	color: var( --color-grey-primary-grey );
 	font-weight: 600;
 } 
-.site-footer-nav a:focus{
+
+.site-footer-nav a:focus {
 	background-color: var( --color-variables-light-coral ) ; 
-	/*border: 1px solid  var( --color-variables-light-coral );*/
 	border-radius: 5px;
 	color: var( --color-grey-primary-grey );
 	font-weight: 600;
 } 
-.site-footer-nav a:active{
+
+.site-footer-nav a:active {
 	background-color: var( --color-variables-light-coral ) ; 
-	/*border: 1px solid  var( --color-variables-light-coral );*/
 	border-radius: 5px;
 	color: var( --color-grey-primary-grey );
 	font-weight: 600;
@@ -601,6 +650,7 @@ figure {
   font-family: var( --font-secondary );
   text-transform: uppercase;
 }
+
 figure svg {
   font-family: var( --font-primary );
   text-transform: uppercase;
@@ -609,33 +659,44 @@ figure svg {
 /* ==========================================================================
    font setteings
    ======================================================================== */
-h2 , h1 {
-	font-family: var( --font-secondary );
-}
-h3 ,dl {
+dl {
 	font-family: var(--font-primary );
 }
-p{
+
+p {
 	/*background-color: var( --color-variables-smoke-grey );*/
 	font-family: var(--font-primary );
-
 }
-.primary-typeface h2{
+
+.primary-typeface h2 {
 
 	font-family: var(--font-primary);
-
+	margin:0.01em 0 0.16em;
 }
-.primary-typeface h4 , .secondary-typeface h4{
 
-	color: var( --color-variables-light-grey );
+.primary-typeface h5 , .secondary-typeface h5 {
+	color: var( --color-grey-darkgrey );
 	font-family: var(--font-primary);
 	text-transform: capitalize;
 }
-.secondary-typeface h2{
 
+.secondary-typeface h2 {
 	font-family: var( --font-secondary );
+	margin:0.01em 0 0.16em;
 }
-.icon-circle{
+
+.heading-divider {
+	padding-bottom: 10px;
+	border-bottom: 1px solid var(--color-primary-sky);
+}
+
+/* SVG */
+
+.color-swatch rect {
+	box-shadow: 5px 5px 5px red;
+}
+
+.icon-circle{ /* i didt work with the when added */
 
 	stroke: var( --color-variables-light-coral ) ;
 	sroke-width: 2;
@@ -644,10 +705,6 @@ p{
 
 	fill: var( --color-variables-light-coral ) ;
 
-}
-.heading-divider {
-	padding-bottom: 10px;
-	border-bottom: 1px solid var(--color-primary-sky);
 }
 
    
