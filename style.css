@@ -990,6 +990,212 @@ details[open] summary:hover::after {
     transform: scale(1);
   }
 }
+/* ==========================================================================
+   Modal
+   ========================================================================== */
+
+@keyframes fadeIn {
+  0% {
+    background:rgba(0,0,0,.0);
+  }
+  100% {
+    background:rgba(0,0,0,.7);
+    
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    background:rgba(0,0,0,.7);
+  }
+  100% {
+    background:rgba(0,0,0,.0);
+  }
+}
+
+@keyframes quickScaleDown {
+  0% {
+    transform:scale(1);
+  }
+  99.9% {
+    transform:scale(1);
+  }
+  100% {
+    transform:scale(0);
+  }
+}
+@keyframes sketchIn {
+	0% {
+		stroke-dashoffset: 600;
+	}
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes sketchOut {
+	0% {
+		stroke-dashoffset: 0;
+	}
+	100% {
+		stroke-dashoffset: 600;
+	}
+}
+@keyframes modalFadeIn {
+  0% {
+    background-color:transparent;
+  }
+  100% {
+    background-color:white;
+    border-top: 0.3rem solid rgb(245,68,81);
+  }
+}
+
+@keyframes modalFadeOut {
+  0% {
+    background-color:white;
+    border-top: 0.3rem solid rgb(245,68,81);
+  }
+  100% {
+    background-color:transparent;
+  }
+}
+
+@keyframes modalContentFadeIn {
+  0% {
+    opacity:0;
+    top:-20px;
+  }
+  100% {
+    opacity:1;
+    top:0;
+  }
+}
+
+@keyframes modalContentFadeOut {
+  0% {
+    opacity:1;
+    top:0px;
+  }
+  100% {
+    opacity:0;
+    top:-20px;
+  }
+}
+
+
+dialog[open] {
+	background-color:transparent;
+    animation: modalFadeIn .5s .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+}
+dialog[open]::backdrop{
+	  background:rgba(0,0,0,.0);
+      animation: fadeIn .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+}
+
+dialog[open] h2 , dialog[open] p {
+	opacity: 0;
+	position:relative;
+    animation: modalContentFadeIn .5s 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+}
+.modal-svg rect{
+	animation: sketchIn .5s .3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+}
+dialog {
+	background-color:transparent;
+    animation: modalFadeOut .5s .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+}
+dialog::backdrop{
+	  background:rgb(255,81,92,0.7);
+      animation: fadeOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+}
+dialog h2 , dialog p {
+	opacity: 0;
+	position:relative;
+    animation: modalContentFadeOut .5s 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+}
+
+.modal-svg {
+        position:absolute;
+        top:0;
+        left:0;
+        height:50%;
+        width:50%;
+        border-radius:1px;
+}
+.modal-svg rect {
+          stroke: rgb(255,81,92,0.7);
+          stroke-width: 2px;
+          stroke-dasharray: 750;
+          stroke-dashoffset: 100;
+        }
+
+#modal-demo{
+	border:none;
+     max-height:50%;
+     max-width: 50%;
+     min-height: 25%;
+     min-width: 21%;
+     padding: 0;
+     text-transform: none;
+
+}
+dialog h2 {
+	font-family: var( --font-secondary ); /*'Oswald', Arial ,sans-serif;*/
+	font-weight: 200;
+	font-size: var(--size-xlarge);
+	background: rgb(250,201,48,0.5) ; /*rgb(245,68,81,0.2);*/
+	box-shadow: 0rem 0.15rem 0.1rem rgb(250,201,48,0.7) , inset 0px 0px 0.1rem rgb(250,201,48,0.7);
+	color: rgb(245,68,81) ;
+	padding:2rem;
+	margin-top: 0;
+	text-align: center;
+	letter-spacing: 0.3rem;
+}
+dialog p {
+	font-family: var( --font-primary );
+	font-weight: 200;
+	font-size: 16px;
+	padding: 0 2rem 2rem;
+	margin-top: 0;
+	line-height: 1.5rem;
+
+}
+
+dialog[open] h2::after {
+  content: url(images/delete.png);
+  bottom:61%;
+  transform: translateY(0);
+  transition: .3s ease;
+  position:absolute;
+  right:2%;
+}
+dialog h2:hover::after {
+  animation: pulse 1s ease;
+}
+
+@keyframes pulse {
+  25% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+} 
+
+figure{
+
+}
+
+
+
+
 
 
 /* ==========================================================================
@@ -1010,4 +1216,7 @@ details[open] summary:hover::after {
 	margin-bottom: 0.7em;
 	padding: 0.1rem 0;
 }
+
+
+
 

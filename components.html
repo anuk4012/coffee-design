@@ -121,7 +121,37 @@
 								<p>Sub-item summary 3</p>
 							</div>
 						</details>
-				</figure>	
+				</figure>
+
+		<h2>Modal Dialog</h2>
+
+		<p>These ae used for forms,onboarding sections</p>
+
+			<figure>
+					<dialog id="modal-demo" class="modal">
+
+						<h2>I am Modal Heading </h2>
+	
+						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et massa sollicitudin justo tempor aliquam eget vel risus. Nullam cursus placerat massa sed faucibus. Ut pharetra dapibus eros, eu pellentesque velit consequat eu. Maecenas hendrerit, lacus sit amet fermentum venenatis, odio tellus lobortis lacus, nec malesuada urna dolor ac nisl. Nam luctus laoreet mauris, vel aliquam mi accumsan vitae. Pellentesque ut neque eu leo vestibulum gravida.</p>
+
+		 					<svg class="modal-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
+								<rect x="0" y="0" fill="none" width="668" height="394" rx="3" ry="3"></rect>
+							</svg>
+
+
+					
+
+					</dialog>
+
+					<button id="open-modal" type="button">Open Dialog</button>
+
+
+				</figure>
+
+
+
+
+
 
 	</main>	
 	<footer class="site-footer">
@@ -142,5 +172,26 @@
 	   <p>Copyright © 2018 Anu kandimalla . All rights reserved</P>
 
 	</footer>	
+
+	<script>
+			
+				document.addEventListener('DOMContentLoaded', function(){
+
+				const modal = document.querySelector('dialog');
+				const open = document.getElementById('open-modal');
+
+				open.addEventListener('click', () => {
+					modal.showModal();
+				});
+
+				modal.addEventListener('click', event => {
+					if (event.target === modal) {
+					modal.close('cancelled');
+				}
+				});
+
+			});
+				
+		</script>
 </body>	
 </html>
