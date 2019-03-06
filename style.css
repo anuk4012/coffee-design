@@ -1004,7 +1004,7 @@ details[open] summary:hover::after {
   }
 }
 
-@keyframes fadeOut {
+/*@keyframes fadeOut {
   0% {
     background:rgba(0,0,0,.7);
   }
@@ -1023,35 +1023,42 @@ details[open] summary:hover::after {
   100% {
     transform:scale(0);
   }
-}
+}*/
 @keyframes sketchIn {
 	0% {
-		stroke-dashoffset: 600;
+		stroke-dashoffset: 778;
 	}
 	100% {
 		stroke-dashoffset: 0;
 	}
 }
 
-@keyframes sketchOut {
+/*@keyframes sketchOut {
 	0% {
 		stroke-dashoffset: 0;
 	}
 	100% {
-		stroke-dashoffset: 600;
+		stroke-dashoffset: 778;
 	}
-}
+}*/
 @keyframes modalFadeIn {
   0% {
     background-color:transparent;
   }
   100% {
-    background-color:white;
-    border-top: 0.3rem solid rgb(245,68,81);
+    background: -webkit-linear-gradient(110deg, #F54451 40%, rgba(0, 0, 0, 0) 30%), -webkit-radial-gradient(farthest-corner at 0% 0%, #FAC930 70%, #8EE1DC 70%);
+    background: -o-linear-gradient(110deg, #F54451 40%, rgba(0, 0, 0, 0) 30%), -o-radial-gradient(farthest-corner at 0% 0%, #FAC930 70%, #8EE1DC 70%);
+    background: -moz-linear-gradient(110deg, #F54451 40%, rgba(0, 0, 0, 0) 30%), -moz-radial-gradient(farthest-corner at 0% 0%, #FAC930 70%, #8EE1DC 70%);
+    background: linear-gradient(110deg, #F54451 40%, rgba(0, 0, 0, 0) 30%), radial-gradient(farthest-corner at 0% 0%, #FAC930 70%, #8EE1DC 70%);
+    /*
+    background: -webkit-linear-gradient(70deg, #F54451  30%, rgba(0,0,0,0) 30%), -webkit-linear-gradient(30deg, #FAC930 60%, #8EE1DC 60%);
+    background: -o-linear-gradient(70deg, #F54451  30%, rgba(0,0,0,0) 30%), -o-linear-gradient(30deg, #FAC930 60%, #8EE1DC 60%);
+    background: -moz-linear-gradient(70deg, #F54451  30%, rgba(0,0,0,0) 30%), -moz-linear-gradient(30deg, #FAC930 60%, #8EE1DC 60%);
+    background: linear-gradient(70deg, #F54451  30%, rgba(0,0,0,0) 30%), linear-gradient(30deg, #FAC930 60%, #8EE1DC 60%);*/
   }
 }
 
-@keyframes modalFadeOut {
+/*@keyframes modalFadeOut {
   0% {
     background-color:white;
     border-top: 0.3rem solid rgb(245,68,81);
@@ -1059,7 +1066,7 @@ details[open] summary:hover::after {
   100% {
     background-color:transparent;
   }
-}
+}*/
 
 @keyframes modalContentFadeIn {
   0% {
@@ -1072,7 +1079,7 @@ details[open] summary:hover::after {
   }
 }
 
-@keyframes modalContentFadeOut {
+/*@keyframes modalContentFadeOut {
   0% {
     opacity:1;
     top:0px;
@@ -1081,16 +1088,26 @@ details[open] summary:hover::after {
     opacity:0;
     top:-20px;
   }
-}
+}*/
 
 
 dialog[open] {
+	animation: modalFadeIn .5s .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
 	background-color:transparent;
-    animation: modalFadeIn .5s .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+	border-radius: 0.8rem;
+	border:none;
+     /*max-height:50%;*/
+	max-width: 50%;
+	min-height: 25%;
+	min-width: 21%;
+	padding: 0;
+	text-transform: none;
+    
 }
-dialog[open]::backdrop{
-	  background:rgba(0,0,0,.0);
-      animation: fadeIn .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+dialog[open]::backdrop {
+	animation: fadeIn .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+	background:rgba(0,0,0,.0);
+      
 }
 
 dialog[open] h2 , dialog[open] p {
@@ -1100,75 +1117,89 @@ dialog[open] h2 , dialog[open] p {
 }
 .modal-svg rect{
 	animation: sketchIn .5s .3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+	stroke: rgb(255,81,92,0.7);
+          /*stroke-width: 2px;
+          stroke-dasharray: 750;
+          stroke-dashoffset: 100;*/
+    stroke-dasharray: 778;
+  	stroke-dashoffset: 778;
+	
 }
-dialog {
+/*dialog {
+	animation: modalFadeOut .5s .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
 	background-color:transparent;
-    animation: modalFadeOut .5s .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+	border-radius: 0.8rem;
+    
 }
 dialog::backdrop{
-	  background:rgb(255,81,92,0.7);
-      animation: fadeOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+	animation: fadeOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+	background:rgb(255,81,92,0.7);
+      
 }
 dialog h2 , dialog p {
+	animation: modalContentFadeOut .5s 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
 	opacity: 0;
 	position:relative;
-    animation: modalContentFadeOut .5s 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-}
+    
+}*/
 
 .modal-svg {
+        border-radius:0.8rem;
+        height:90%;
+        left:0;
         position:absolute;
         top:0;
-        left:0;
-        height:50%;
-        width:50%;
-        border-radius:1px;
+        width:97%;
 }
-.modal-svg rect {
-          stroke: rgb(255,81,92,0.7);
-          stroke-width: 2px;
+/*.modal-svg rect {
+	stroke: rgb(255,81,92,0.7);
+          /*stroke-width: 2px;
           stroke-dasharray: 750;
           stroke-dashoffset: 100;
+          stroke-dasharray: 778;
+  		stroke-dashoffset: 778;
+          
         }
 
 #modal-demo{
 	border:none;
-     max-height:50%;
+     /*max-height:50%;
      max-width: 50%;
      min-height: 25%;
      min-width: 21%;
      padding: 0;
      text-transform: none;
 
-}
+}*/
 dialog h2 {
-	font-family: var( --font-secondary ); /*'Oswald', Arial ,sans-serif;*/
-	font-weight: 200;
-	font-size: var(--size-xlarge);
-	background: rgb(250,201,48,0.5) ; /*rgb(245,68,81,0.2);*/
+	/*background: rgb(250,201,48,0.5) ; /*rgb(245,68,81,0.2);
+	/*font-family: var( --font-secondary ); Oswald', Arial ,sans-serif;
 	box-shadow: 0rem 0.15rem 0.1rem rgb(250,201,48,0.7) , inset 0px 0px 0.1rem rgb(250,201,48,0.7);
-	color: rgb(245,68,81) ;
-	padding:2rem;
-	margin-top: 0;
-	text-align: center;
+	
+	color: white ;
+	font-size: var(--size-xlarge);*/
+	font-weight: 200;
 	letter-spacing: 0.3rem;
+	margin-top: 0;
+	padding:2rem;
+	text-align: center;
 }
 dialog p {
-	font-family: var( --font-primary );
+	font-size: var(--size-small); /*change to var value */
 	font-weight: 200;
-	font-size: 16px;
-	padding: 0 2rem 2rem;
-	margin-top: 0;
 	line-height: 1.5rem;
-
+	margin-top: 0;
+	min-width: 21%;
+	padding: 0 2rem 2rem;	
 }
 
 dialog[open] h2::after {
-  content: url(images/delete.png);
   bottom:61%;
-  transform: translateY(0);
-  transition: .3s ease;
+  content: url(images/close.svg);
   position:absolute;
   right:2%;
+  transform: translateY(0);
+  transition: .3s ease;
 }
 dialog h2:hover::after {
   animation: pulse 1s ease;
@@ -1188,14 +1219,6 @@ dialog h2:hover::after {
     transform: scale(1);
   }
 } 
-
-figure{
-
-}
-
-
-
-
 
 
 /* ==========================================================================
