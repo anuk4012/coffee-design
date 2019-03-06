@@ -965,7 +965,7 @@ summary::after {
 }
 
 details[open] summary::after {
-  content: url(images/delete.png);
+  content: url(images/close.svg);
   top: 0;
   transform: translateY(0);
   transition: .3s ease;
@@ -976,23 +976,25 @@ details[open] summary:hover::after {
   animation: pulse 1s ease;
 }
 
+
+/* ==========================================================================
+   Key frames
+   ========================================================================== */
+
 @keyframes pulse {
   25% {
-    transform: scale(1.1);
+    transform: scale(0.9);
   }
   50% {
     transform: scale(1);
   }
   75% {
-    transform: scale(1.1);
+    transform: scale(0.9);
   }
   100% {
     transform: scale(1);
   }
 }
-/* ==========================================================================
-   Modal
-   ========================================================================== */
 
 @keyframes fadeIn {
   0% {
@@ -1004,26 +1006,6 @@ details[open] summary:hover::after {
   }
 }
 
-/*@keyframes fadeOut {
-  0% {
-    background:rgba(0,0,0,.7);
-  }
-  100% {
-    background:rgba(0,0,0,.0);
-  }
-}
-
-@keyframes quickScaleDown {
-  0% {
-    transform:scale(1);
-  }
-  99.9% {
-    transform:scale(1);
-  }
-  100% {
-    transform:scale(0);
-  }
-}*/
 @keyframes sketchIn {
 	0% {
 		stroke-dashoffset: 778;
@@ -1033,14 +1015,6 @@ details[open] summary:hover::after {
 	}
 }
 
-/*@keyframes sketchOut {
-	0% {
-		stroke-dashoffset: 0;
-	}
-	100% {
-		stroke-dashoffset: 778;
-	}
-}*/
 @keyframes modalFadeIn {
   0% {
     background-color:transparent;
@@ -1058,16 +1032,6 @@ details[open] summary:hover::after {
   }
 }
 
-/*@keyframes modalFadeOut {
-  0% {
-    background-color:white;
-    border-top: 0.3rem solid rgb(245,68,81);
-  }
-  100% {
-    background-color:transparent;
-  }
-}*/
-
 @keyframes modalContentFadeIn {
   0% {
     opacity:0;
@@ -1079,17 +1043,9 @@ details[open] summary:hover::after {
   }
 }
 
-/*@keyframes modalContentFadeOut {
-  0% {
-    opacity:1;
-    top:0px;
-  }
-  100% {
-    opacity:0;
-    top:-20px;
-  }
-}*/
-
+/* ==========================================================================
+   Modal
+   ========================================================================== */
 
 dialog[open] {
 	animation: modalFadeIn .5s .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
@@ -1104,6 +1060,7 @@ dialog[open] {
 	text-transform: none;
     
 }
+
 dialog[open]::backdrop {
 	animation: fadeIn .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
 	background:rgba(0,0,0,.0);
@@ -1115,75 +1072,34 @@ dialog[open] h2 , dialog[open] p {
 	position:relative;
     animation: modalContentFadeIn .5s 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
 }
+
 .modal-svg rect{
 	animation: sketchIn .5s .3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
 	stroke: rgb(255,81,92,0.7);
-          /*stroke-width: 2px;
-          stroke-dasharray: 750;
-          stroke-dashoffset: 100;*/
     stroke-dasharray: 778;
   	stroke-dashoffset: 778;
 	
 }
-/*dialog {
-	animation: modalFadeOut .5s .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-	background-color:transparent;
-	border-radius: 0.8rem;
-    
-}
-dialog::backdrop{
-	animation: fadeOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-	background:rgb(255,81,92,0.7);
-      
-}
-dialog h2 , dialog p {
-	animation: modalContentFadeOut .5s 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-	opacity: 0;
-	position:relative;
-    
-}*/
 
 .modal-svg {
-        border-radius:0.8rem;
-        height:90%;
-        left:0;
-        position:absolute;
-        top:0;
-        width:97%;
+    border-radius:0.8rem;
+    /*height:90%;*/
+    left:0;
+    position:absolute;
+    top:0;
+    width:97%;
 }
-/*.modal-svg rect {
-	stroke: rgb(255,81,92,0.7);
-          /*stroke-width: 2px;
-          stroke-dasharray: 750;
-          stroke-dashoffset: 100;
-          stroke-dasharray: 778;
-  		stroke-dashoffset: 778;
-          
-        }
 
-#modal-demo{
-	border:none;
-     /*max-height:50%;
-     max-width: 50%;
-     min-height: 25%;
-     min-width: 21%;
-     padding: 0;
-     text-transform: none;
-
-}*/
 dialog h2 {
-	/*background: rgb(250,201,48,0.5) ; /*rgb(245,68,81,0.2);
-	/*font-family: var( --font-secondary ); Oswald', Arial ,sans-serif;
-	box-shadow: 0rem 0.15rem 0.1rem rgb(250,201,48,0.7) , inset 0px 0px 0.1rem rgb(250,201,48,0.7);
-	
-	color: white ;
-	font-size: var(--size-xlarge);*/
-	font-weight: 200;
+	/*color: white ;
+	font-size: var(--size-xlarge);
+	font-weight: 200;*/
 	letter-spacing: 0.3rem;
 	margin-top: 0;
 	padding:2rem;
 	text-align: center;
 }
+
 dialog p {
 	font-size: var(--size-small); /*change to var value */
 	font-weight: 200;
@@ -1198,27 +1114,13 @@ dialog[open] h2::after {
   content: url(images/close.svg);
   position:absolute;
   right:2%;
-  transform: translateY(0);
-  transition: .3s ease;
 }
+
 dialog h2:hover::after {
   animation: pulse 1s ease;
 }
 
-@keyframes pulse {
-  25% {
-    transform: scale(0.9);
-  }
-  50% {
-    transform: scale(1);
-  }
-  75% {
-    transform: scale(0.9);
-  }
-  100% {
-    transform: scale(1);
-  }
-} 
+
 
 
 /* ==========================================================================
