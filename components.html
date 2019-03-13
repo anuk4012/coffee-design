@@ -12,6 +12,8 @@
 	<link rel="stylesheet" href="style.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Oswald:300,400|Raleway:300,400,500" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
 	
 </head>
@@ -42,48 +44,48 @@
 
 				<figure class="hero-button-example" >
 
-					<figcaption> Hero Button states </figcaption>
+				<figcaption> Hero Button states </figcaption>
 
-		  				<a  class=" hero-button"  href="https://www.w3schools.com/html/">Default</a>
+	  				<a  class=" hero-button"  href="https://www.w3schools.com/html/">Default</a>
 
-		  				<a  class="hero-button hoverd"  href="https://www.w3schools.com/html/">Hover</a>
+	  				<a  class="hero-button hovered"  href="https://www.w3schools.com/html/">Hover</a>
 
-		  				<a  class="hero-button focused"  href="https://www.w3schools.com/html/">Focus</a>
+	  				<a  class="hero-button focused"  href="https://www.w3schools.com/html/">Focus</a>
 
-		  				<a  class="hero-button actived"  href="https://www.w3schools.com/html/">Active</a>
-		  					
+	  				<a  class="hero-button actived"  href="https://www.w3schools.com/html/">Active</a>
+	  					
 				</figure>
 
 				<figure class="normal-button-example">
 
-					<figcaption> Normal Button states </figcaption>
+				<figcaption> Normal Button states </figcaption>
 					
-						<a  class="normal-button" href="https://www.w3schools.com/html/">Default</a>
+					<a  class="normal-button" href="https://www.w3schools.com/html/">Default</a>
 
-						<a  class="normal-button hover" href="https://www.w3schools.com/html/">Hover</a>
+					<a  class="normal-button hover" href="https://www.w3schools.com/html/">Hover</a>
 
-						<a  class="normal-button focus" href="https://www.w3schools.com/html/">focus</a>
+					<a  class="normal-button focus" href="https://www.w3schools.com/html/">focus</a>
 
-						<a  class="normal-button clicked " href="https://www.w3schools.com/html/">active</a>
+					<a  class="normal-button clicked " href="https://www.w3schools.com/html/">active</a>
 
 					
 				</figure>
 
 				<figure class=" tertiary-button-example">
 
-					<figcaption> Tertiary Button states </figcaption>
+				<figcaption> Tertiary Button states </figcaption>
 					
-						<a  class=" tertiary-button" href="https://www.w3schools.com/html/">Default</a>
+					<a  class=" tertiary-button" href="https://www.w3schools.com/html/">Default</a>
 
-						<a  class=" tertiary-button hover" href="https://www.w3schools.com/html/">Hover</a>
+					<a  class=" tertiary-button hover" href="https://www.w3schools.com/html/">Hover</a>
 
-						<a  class=" tertiary-button focus" href="https://www.w3schools.com/html/">Focus</a>
+					<a  class=" tertiary-button focus" href="https://www.w3schools.com/html/">Focus</a>
 
-						<a  class=" tertiary-button clicked" href="https://www.w3schools.com/html/">Active</a>
+					<a  class=" tertiary-button clicked" href="https://www.w3schools.com/html/">Active</a>
 					
 				</figure>
 
-			<h2>Accordians</h2>
+			<h2>Accordions</h2>
 
 			<p>They are used for FAQ's and to group the content.</p>
 
@@ -127,29 +129,179 @@
 
 		<p>type of component can be used for popup information, sign-in forms, confirmation indicators.</p>
 
-				<figure>
+		<figure>
 
-						<dialog id="modal-demo" class="modal">
+			<dialog id="modal-demo" class="modal">
 
 
-							<h2>I am Modal Heading </h2>
+				<h2>I am Modal Heading </h2>
 
+
+				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et massa sollicitudin justo tempor aliquam eget vel risus. Nullam cursus placerat massa sed faucibus. Ut pharetra dapibus eros, eu pellentesque velit consequat eu. Maecenas hendrerit, lacus sit amet fermentum venenatis, odio tellus lobortis lacus, nec malesuada urna dolor ac nisl. Nam luctus laoreet mauris, vel aliquam mi accumsan vitae. Pellentesque ut neque eu leo vestibulum gravida.</p>
+
+
+					<svg class="modal-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
+
+					<rect x="0" y="0" fill="none" width="778" height="394" stroke="#F54451" stroke-width="5" rx="3" ry="3"></rect>
+					
+				</svg>
+					
+			</dialog>
+
+			<button id="open-modal" type="button">Open Dialog</button>
+
+
+		</figure>
+
+		<h2> Form Inputs </h2>
+
+		<p> These are the components for the Forms which need Call to action buttons to submit with information </p>
+
+			<h3>Text Inputs</h3>
+
+			<p>Text fields let users enter and edit text.hey typically appear in forms and dialogs.</p>
+
+			<figure>
+				
+				<label for="your-name">Your Name</label>
+				<p class="text-microcopy">Enter If any Middle name available</p>
+				<input type="text" id="your-name" name="your-name" placeholder="Eg.jhon doe" required>
+
+				<label for="your-name-focus">Your Name:Focus</label>
+				<input  class="focus-state" type="text" id="your-name-focus" name="your-name-focus" placeholder="Eg.jhon doe" >
+
+				<label for="your-name">Your Name:Disable</label>
+				<input type="text" id="your-name" name="your-name" placeholder="Eg.jhon doe" disabled>
+
+				<label for="your-name">Your Name:Error State</label>
+				<input type="text" id="your-name" name="your-name" placeholder="Eg.jhon doe" class="error-state">
+				<p class="error-text"> Error-message:Invalid Input </p>
+
+
+			</figure>
+
+			<h3>Text Area</h3>
+
+			<p> A text area can hold an unlimited number of characters, and the text renders in a fixed-width font </p>
+
+			<figure>
+					
+				<label for="comment">Your Comment - Default</label>
+				<textarea id="comment" name="comment" placeholder="Enter your text here"></textarea>
+				<p class="textarea-microcopy">0-255 characters</p>
+
+				<label for="comment">Your Comment - focus</label>
+				<textarea id="comment" name="comment" placeholder="Enter your text here" class="focus-state"></textarea>
+				<p class="textarea-microcopy">0-255 characters</p>
+
+				<label for="comment">Your Comment -  error</label>
+				<textarea id="comment" name="comment"  class="error-state"></textarea>
+				<p class="error-text">Exceeds the 255 characters</p>
+
+				<label for="comment">Your Comment -  Disabled </label>
+				<textarea id="comment" name="comment"  placeholder="Enter your text here"  disabled></textarea>
+				<p class="textarea-microcopy">0-255 characters</p>
+
+			</figure>
+
+			<h3>Select Input</h3>
+
+			<p> It is used to select the details from the given available</p>
+
+			<figure>
+
+				<select id="city" name="city-type">
+
+					<option selected disabled hidden value="">Default</option>
+
+					<option value="Austin">Austin</option>
+
+					<option value="Newyork">Newyork</option>
+
+					<option value="Dallas">Dallas</option> 
+
+				</select>
+
+				<select class="focus" id="city" name="city-type">
+
+					<option selected disabled hidden value="">Focus & Hover</option>
+
+					<option value="Austin">Austin</option>
+
+					<option value="Newyork">Newyork</option>
+
+					<option value="Dallas">Dallas</option> 
+
+				</select>
+
+				<select class="focus" id="city" name="city-type" disabled>
+
+					<option selected disabled hidden value="">Disabled</option>
+
+					<option value="Austin">Austin</option>
+
+					<option value="Newyork">Newyork</option>
+
+					<option value="Dallas">Dallas</option> 
+
+				</select>
+
+				<p class="example-select"> <em>Eg..</em> I am living in 
+
+				<select id="city" name="city-type">
+
+					<option selected disabled hidden value="">Choose City</option>
+
+					<option value="Austin">Austin</option>
+
+					<option value="Newyork">Newyork</option>
+
+					<option value="Dallas">Dallas</option> 
+
+				</select>,
+					
+				which is in 
+
+				<select id="state" name="state-type">
+
+					<option selected disabled hidden value="">Choose City</option>
+
+					<option value="Texas">Texas</option>
+
+					<option value="Newyork">Newyork</option>
+
+					<option value="Florida">Florida</option> 
+
+				</select> state.
+
+				</p>	
 		
-								<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et massa sollicitudin justo tempor aliquam eget vel risus. Nullam cursus placerat massa sed faucibus. Ut pharetra dapibus eros, eu pellentesque velit consequat eu. Maecenas hendrerit, lacus sit amet fermentum venenatis, odio tellus lobortis lacus, nec malesuada urna dolor ac nisl. Nam luctus laoreet mauris, vel aliquam mi accumsan vitae. Pellentesque ut neque eu leo vestibulum gravida.</p>
+			</figure>
+
+	
+
+			<h3> Button/Submit </h3>
+
+			<p>The submit event triggers when the form is submitted, it is usually used to validate the form before sending it to the server or to abort the submission </p>
+
+			<figure>
+
+			<!--<input type="submit" value="Submit">
+
+			<input class="wrap hover" type="submit" value="Hover state">
+
+			<input class="button-active" type="submit" value="Active state">-->
+
+   			<button type="submit">Default Button</button>
+	
+			<button class="hover" type="submit">Hover Button</button>
+
+			<button class="focus" type="submit">Focus Button</button>
+	
+			<button class="button-active" type="submit"><i class="fa fa-spinner fa-spin"></i>Active Button</button>
 
 
-			 					<svg class="modal-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
-
-									<rect x="0" y="0" fill="none" width="778" height="394" stroke="#F54451" stroke-width="5" rx="3" ry="3"></rect>
-									
-								</svg>
-								
-						</dialog>
-
-						<button id="open-modal" type="button">Open Dialog</button>
-
-
-				</figure>
+			</figure>
 
 
 	</main>	
@@ -174,23 +326,23 @@
 
 	<script>
 			
-				document.addEventListener('DOMContentLoaded', function(){
+		document.addEventListener('DOMContentLoaded', function(){
 
-				const modal = document.querySelector('dialog');
-				const open = document.getElementById('open-modal');
+			const modal = document.querySelector('dialog');
+			const open = document.getElementById('open-modal');
 
 				open.addEventListener('click', () => {
 					modal.showModal();
 				});
 
-				modal.addEventListener('click', event => {
-					if (event.target === modal) {
+			modal.addEventListener('click', event => {
+				if (event.target === modal) {
 					modal.close('cancelled');
 				}
-				});
-
 			});
-				
-		</script>
+
+		});
+			
+	</script>
 </body>	
 </html>
