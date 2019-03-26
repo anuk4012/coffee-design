@@ -45,7 +45,7 @@ html{
 
 
  /* Ratios */
-	--ratio: 1.61;
+	--ratio: 1.50;
 	--size-xxxlarge:	calc( 1rem * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio) ); 
 	--size-xxlarge:		calc( 1rem * var(--ratio) * var(--ratio) * var(--ratio) );
 	--size-xlarge:		calc( 1rem * var(--ratio) * var(--ratio) );
@@ -62,6 +62,9 @@ html{
 	
 
 }
+
+
+
 
 body {
 	background-color: var( --color-variables-smoke-white ); /*to-do add bacound color #FEFEFC */
@@ -128,7 +131,7 @@ h4,h5,h6 {
 h1 {
 	color: var( --color-variables-light-coral );
  	font-size: var( --size-xxxlarge ) ;
- 	line-height: 0.9;
+ 	line-height: 1.03; /*1.03*/
  	letter-spacing: -0.01rem;
  	margin: 0.25em 0 0.1em;
 }
@@ -136,7 +139,7 @@ h1 {
 h2 { 
 	color:	var( --color-primary-sky );
  	font-size: var( --size-xxlarge) ; /*4.236rem;*/
- 	line-height: 1.05;
+ 	line-height: 1.05; /*same*/
  	letter-spacing: 0.05rem;
  	text-shadow: 0.5px 0.5px 0.8px var( --color-variables-light-sky );
  	
@@ -145,27 +148,27 @@ h2 {
 h3 {
  	font-size: var( --size-xlarge ) ; 
  	/*font-family: var(--font-secondary);*/
- 	line-height: 1.3;
+ 	line-height: 1.3;/*same*/
  	letter-spacing: -0.05rem;
  	  
 }
 
- h4 {
+h4 {
  	font-size: var( --size-large ) ; 
- 	line-height: 1.2;
+ 	line-height: 1.2;/*same*/
  	letter-spacing: 0.01rem;
 }
 
- h5 {
+h5 {
  	font-size: var( --size-small ) ;
- 	line-height: 1.4;
+ 	line-height: 1.4;/*same*/
  	letter-spacing: 0.019rem;
  	
 }
 
- h6 {
+h6 {
  	font-size: var( --size-xsmall ) ;
- 	line-height: 1.4;
+ 	line-height: 1.4;/*same*/
  	letter-spacing: 0.019rem;
  	margin-bottom: 0.1em;
 
@@ -186,6 +189,8 @@ h3 {
 	width: 109px; /*var( --size-xxxlarge ) */
 	
 }
+
+
 
 /*For Mobile Screens*/
 
@@ -282,7 +287,7 @@ h3 {
 /*Featured Copy*/
 
 .featured-copy-styling , .normal-copy-styling , .tertiary-copy-styling {
-    border-radius: 12px;
+    border-radius: 0.75rem;
 	background-color: var( --color-variables-white ); /*#FFFFFF*/
 	box-shadow: 0px 0px 3.1px var( --color-variables-light-grey );
 	margin: 0.7em 0 0.7em;
@@ -309,7 +314,7 @@ h3 {
     font-size: var( --size-large );
     font-weight: 300;
     /*font-style: italic;*/
-    line-height: 1.5;
+    line-height: 1.35;
     margin: -0.25em 0 0.1em;
 }
 
@@ -339,11 +344,11 @@ h3 {
 
 /*blokequote*/
 .blockquote-stylings {
-	background: url("images/quotes.svg") 15% 14% no-repeat;   
+	background: url("images/quotes.svg") 50% 14% no-repeat;   
 	background-size: 2.5em;
-	border-radius: 12px;
+	border-radius: 0.75rem;
 	background-color: var( --color-variables-white ); /*#FFFFFF*/
-	box-shadow: 0px 0px 3.1px var( --color-variables-light-grey );
+	box-shadow: 0 0 3.1px var( --color-variables-light-grey );
 	margin: 0.7em 0 0.7em;
 	padding: 10px 0 10px;
 
@@ -357,6 +362,7 @@ h3 {
 
 .blockquote-stylings p {
 	font-weight: 400;
+	font-size: var( --size-small );
 	line-height: 1.9;
 	margin-top: 2em;
     padding-top: 2.4em;
@@ -405,7 +411,23 @@ h3 {
 	list-style-image: url("images/coffeebeans.svg");
 
 }
-
+@media ( min-width: 600px ) {
+	
+	html {
+		--ratio: 1.61;
+	}
+	h1{
+		line-height: 1; /*1.03*/
+	}
+	.featured-copy {
+		line-height: 1.5;
+	}
+	.blockquote-stylings p {
+		font-size: var( --size-large );
+		margin-top: 0;
+	}
+	
+}
 
 
 
@@ -661,7 +683,7 @@ p {
     text-decoration: none;
     transition: all 0.3s;
     padding: 0 1rem;
-    width: 45%;
+    width: 65%;
     z-index: 1;
 }
  
@@ -756,7 +778,7 @@ p {
     color: var( --color-primary-golden ); /*#F9BE02;*/
     display: inline-block;
     font-family: var( --font-secondary ) ; /*'Oswald', Arial ,sans-serif; */
-    font-size: 1.4em;
+    font-size: 1.6em;
     font-weight: 400;
     letter-spacing: 0.09em;
     margin-left: 2em;
@@ -819,7 +841,7 @@ p {
     color: var( --color-grey-primary-grey ); /*#32322C;*/
     display: inline-block;
     font-family: var( --font-primary ) ; /*'Oswald', Arial ,sans-serif;*/
-    font-size: 1.4em;
+    font-size: 1.7em;
     font-style: italic;
     font-weight: 200;
     letter-spacing: 0.07em;
@@ -885,6 +907,21 @@ p {
 	padding-top: 1em;
 }
 
+@media ( min-width: 600px ) {
+	.hero-button , .hero-button:visited {
+		width:45%;
+	}
+	.normal-button , .normal-button:visited {
+		/*padding: .75rem 1rem;*/
+		font-size: 1.4em;
+	}
+	.tertiary-button , .tertiary-button:visited {
+		font-size: 1.4em;
+	}
+
+}
+
+
 
 
 /* ==========================================================================
@@ -897,12 +934,12 @@ details {
   border-radius: 5px;
   border: 1px solid rgba(0,0,0,.1);
   box-sizing: border-box;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
   margin-top: 1.9rem;
   max-width: 40em;
   min-height: 5px;
-  padding: 2.8rem 4.59rem 2.8rem 2.8rem; /*45px 70px 45px 45px;*/
+  padding: 2.8rem 4.59rem 0.8rem 2.8rem; /*45px 70px 45px 45px;*/
   position: relative;
   text-transform: none;
   transition: all .3s;
@@ -918,9 +955,9 @@ details div {
 
 details p {
   color: var( --color-grey-primary-grey );
-  font-size: 1rem;
+  font-size: 0.9rem;/*0.9rem*/
   font-weight: 300;
-  line-height: 1.05rem;
+  line-height: 0.75rem;/*0.75rem*/
   margin-top: -1px;
   text-transform: none;
 }
@@ -972,6 +1009,17 @@ details[open] summary:hover::after {
   animation: pulse 1s ease;
 }
 
+@media ( min-width: 600px ) {
+	details {
+		font-size: 1.4rem;
+		padding: 2.8rem 4.59rem 2.8rem 2.8rem;
+	}
+	details p {
+		font-size: 1rem;
+  		line-height: 1.05rem;
+	}
+
+}
 
 /* ==========================================================================
    Key frames
@@ -1048,6 +1096,39 @@ details[open] summary:hover::after {
   }
 }
 
+@keyframes spinPulse {
+    0% { 
+    	transform:rotate(160deg);
+    	opacity:0; 
+    	box-shadow:0 0 1px #bdd73c; }
+	50% { 
+		transform:rotate(145deg); 
+		opacity:1;
+	}
+	100% { 
+		transform:rotate(-320deg); 
+		opacity:0; 
+	}
+}
+@keyframes spinoffPulse {
+    0% { 
+    	transform:rotate(0deg);
+     }
+	100% { 
+		transform:rotate(360deg); 
+	}
+}
+@keyframes rotatecircle {
+    0% {
+    	transform:rotate(0deg); 
+ 	}
+	100% { 
+		transform:rotate(-360deg); 
+	}
+}
+
+
+
 /* ==========================================================================
    Modal
    ========================================================================== */
@@ -1058,7 +1139,7 @@ dialog[open] {
 	border-radius: 0.8rem;
 	border:none;
      /*max-height:50%;*/
-	max-width: 50%;
+	max-width: 80%;
 	min-height: 25%;
 	min-width: 21%;
 	padding: 0;
@@ -1101,7 +1182,7 @@ dialog h2 {
 	font-weight: 200;*/
 	letter-spacing: 0.3rem;
 	margin-top: 0;
-	padding:2rem;
+	padding:1.5rem;
 	text-align: center;
 }
 
@@ -1125,16 +1206,27 @@ dialog h2:hover::after {
 	animation: pulse 1s ease;
 }
 
+@media ( min-width: 600px) {
+	dialog[open] {
+		max-width: 50%;
+	}
+	dialog h2 {
+		padding:2rem;	
+	}
+
+}
+
 
 /* ==========================================================================
    Layout
    ========================================================================== */
+body{
+	margin: 0;
+}
 
-
-.main-content { 	
+main { 
+	margin: 2rem 1rem;	
 	max-width: 35.5rem; /*set it to 480px becasue of mobile first design*/
-
-
 }
 
 .typeface-styles {
@@ -1145,6 +1237,11 @@ dialog h2:hover::after {
 	padding: 0.1rem 0;
 }
 
+@media ( min-width: 37rem ) {
+	main {
+		margin: 2rem auto;	
+	}
+}
 
 /* ==========================================================================
   Form Elements
@@ -1361,13 +1458,13 @@ button, input[type="submit"] {
 	color: var(--color-primary-sky);
     display: block;
     font-family: var(--font-secondary);
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     letter-spacing: 0.125rem;
     margin-top: 2.5rem;
     outline: none;
     padding: 0.8rem;
     text-align: center;
-    width: 58%;
+    /*width: 58%;*/
 }
 
 button:hover, button:focus , button.focus ,  input[type="submit"]:hover, button.hover , input[type="submit"].hover, .button-active , button:active, input[type="submit"]:active 
@@ -1379,16 +1476,32 @@ input[type="submit"]:focus {
 	padding: 0.75rem 1.5rem;
 }
 
-.button-active , button:active, input[type="submit"]:active{
+.button-active , button:active, input[type="submit"]:active , .button-active:hover {
+	color: var(--color-primary-sky);
 	font-size: var(--size-small);
 	transition: all 0.5s ease;
 }
 
-.fa {
-  margin-left: -0.75rem;
-  margin-right: 0.5rem;
+.button-active::before , button:active::before , input[type="submit"]:active::before {
+	animation: spinPulse 1s infinite linear;
+	background-color: transparent;
+	border: 0.187rem solid var(--color-variables-white );
+	border-left: 0.0625rem solid transparent;
+	border-right: 0.0625rem solid transparent;
+	border-radius: 6.25rem;
+	content: '' ;
+	display: inline-block;
+	height: 1.25rem;
+	opacity: .9;
+	position: relative;
+	right: -40%;
+	top: 0.25rem;
+	width: 1.25rem;
+	/*margin: 0 auto;*/	
 }
 
-
-
-
+@media ( min-width: 600px) {
+	button, input[type="submit"] {
+		font-size: 1.125rem;
+	}
+}
