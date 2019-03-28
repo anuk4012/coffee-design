@@ -11,31 +11,46 @@
 
 	<link rel="stylesheet" href="style.css">
 
-	<link href="https://fonts.googleapis.com/css?family=Oswald:300,400|Raleway:300,400,500" rel="stylesheet">
-
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
+	<link href="https://fonts.googleapis.com/css?family=Oswald:300,400|Raleway:300,400,500" rel="stylesheet">	
 	
 </head>
 
 <body>
-	<header class="site-header">
 	
-		<div class="site-header-logo"> Coffee Design Systems </div> <!-- Since there is no icon created for now added div cl -->
+	<header>
+
+		<div class="logo">
+
+			<a href="index.html">
+
+				<img src= "images/coffeeicon1.svg" alt="logo" > 
+
+			<a/>
+
+		</div>
 		
-			<nav> <!-- add html to the nav bar to click -->
-				<ul class="site-header-nav">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="style.html">Style</a></li>	
-					<li><a href="components.html" class="current-page">Components</a></li>	
-					<li><a href="layouts.html">Layout</a></li>
-				</ul>
-			</nav>
-		
+		<nav class="nav-primary"> 
+
+			<ul>
+
+				<li ><a href="index.html" >Home</a></li> <!--Capitalize with CSS-->
+
+				<li><a href="style.html">Style</a></li>
+
+				<li><a href="components.html" class="current-page" >components</a></li>
+
+				<li><a href="layouts.html">Layout</a></li>
+
+			</ul>
+
+		</nav>
+
 	</header>
+
 	<main class="main-content">
 
-		<h1>Coffee Design Systems UI Components</h1>
+		
+			<h1>Coffee Design Systems UI Components</h1>
 
 			<h2>Button Links</h2>
 
@@ -286,22 +301,81 @@
 
 			<figure>
 
-			<!--<input type="submit" value="Submit">
+	   			<button type="submit">Default Button</button>
+		
+				<button class="hover" type="submit">Hover Button</button>
 
-			<input class="wrap hover" type="submit" value="Hover state">
-
-			<input class="button-active" type="submit" value="Active state">-->
-
-   			<button type="submit">Default Button</button>
-	
-			<button class="hover" type="submit">Hover Button</button>
-
-			<button class="focus" type="submit">Focus Button</button>
-	
-			<button class="button-active" type="submit">Active Button</button>
+				<button class="focus" type="submit">Focus Button</button>
+		
+				<button class="button-active" type="submit">Active Button</button>
 
 			</figure>
-<!--<i class="fa fa-spinner fa-spin"></i>-->
+
+		<h2>Navigation</h2>
+
+		<p> Navigation in web-pages used to navigate to different pages.</p>
+
+			<h3>Primary Nav</h3>
+
+			<p> It is mainly used in site header.</p>
+	
+
+			<figure class="example-header-container">
+						
+				<nav class="nav-primary"> 
+
+					<ul>
+						<li ><a href="index.html" >HOME</a></li>
+
+						<li><a href="style.html">STYLE</a></li>	
+
+						<li><a href="components.html" class="current-page" >COMPONENTS</a></li>
+
+						<li><a href="layouts.html">LAYOUT</a></li>
+
+					</ul>
+
+				</nav>
+	
+
+			</figure>
+
+			<h3>Vertical Nav</h3>
+
+			<p> It is to show the content of the page.</p>
+
+			<figure class="">
+
+				<nav class="secondary-nav">
+
+						<ul class="secondary-nav-ul">
+
+							<li><a href="" id="secondary-nav-current-page">Color Pallete</a></li>
+
+							<li><a href="">Button Links</a>
+
+								<ul class="submenu">
+
+	        						<li><a href="">Hero Buttons</a></li>
+
+	        						<li><a href="">Normal Buttons</a></li>
+
+	        						<li><a href="">Teritary Buttons</a></li>
+
+	  							</ul>
+
+							</li>
+
+							<li><a href="">Accordions</a></li>
+
+							<li><a href="">Form Inputs</a></li>
+
+							<li><a href="">Navigation</a></li>
+
+						</ul>
+				</nav>
+
+		</figure>
 
 	</main>	
 	<footer class="site-footer">
